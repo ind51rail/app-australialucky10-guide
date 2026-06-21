@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>澳洲幸运10 – 日常查询对照与参考</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans SC', sans-serif;
+            background-color: #faf7f0;
+            color: #2e2a24;
+            line-height: 1.7;
+            padding: 0 1.2rem;
+        }
+
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 1.6rem 0 3.6rem;
+        }
+
+        /* 顶部导航 */
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0 0.8rem;
+            border-bottom: 1px solid #e2dcd0;
+            margin-bottom: 2.8rem;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: #3d352b;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.4rem 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #5e5548;
+            font-size: 0.95rem;
+            font-weight: 450;
+            padding: 0.2rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .nav-links a:hover {
+            border-bottom-color: #a0896d;
+            color: #2e2a24;
+        }
+
+        /* hero 区 — 日常检索入口 */
+        .hero {
+            background: #f3efe7;
+            border-radius: 2rem;
+            padding: 2.8rem 2.4rem;
+            margin-bottom: 3.2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 550;
+            letter-spacing: -0.01em;
+            margin-bottom: 1rem;
+            color: #2a241e;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            max-width: 680px;
+            color: #4d453c;
+        }
+
+        .hero .tagline {
+            display: inline-block;
+            background: #d9d0c2;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #2f2a23;
+            margin-top: 1.2rem;
+        }
+
+        /* 核心介绍 */
+        .intro-block {
+            background: #ffffffd9;
+            padding: 2rem 2.2rem;
+            border-radius: 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid #e7e0d4;
+        }
+
+        .intro-block h2 {
+            font-size: 1.5rem;
+            font-weight: 520;
+            margin-bottom: 1.2rem;
+            color: #2c261f;
+            border-left: 5px solid #b7a68b;
+            padding-left: 1rem;
+        }
+
+        .intro-block p {
+            margin-bottom: 1rem;
+        }
+
+        .intro-block a {
+            color: #6d5d46;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            transition: color 0.2s;
+        }
+
+        .intro-block a:hover {
+            color: #3d3226;
+        }
+
+        /* 三个日常场景卡片 */
+        .scenes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 3.2rem;
+        }
+
+        .scene-card {
+            background: #ffffff;
+            border-radius: 1.8rem;
+            padding: 1.8rem 1.6rem 2rem;
+            border: 1px solid #e5ddd1;
+            transition: box-shadow 0.25s;
+        }
+
+        .scene-card:hover {
+            box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+        }
+
+        .scene-card .icon {
+            font-size: 2rem;
+            margin-bottom: 0.6rem;
+            display: block;
+        }
+
+        .scene-card h3 {
+            font-size: 1.2rem;
+            font-weight: 530;
+            margin-bottom: 0.6rem;
+            color: #332d25;
+        }
+
+        .scene-card p {
+            font-size: 0.95rem;
+            color: #4f483f;
+        }
+
+        /* 引用 / 提示框 */
+        .notice-box {
+            background: #ede7dc;
+            border-radius: 1.6rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 3rem;
+            border-left: 6px solid #b3a187;
+        }
+
+        .notice-box strong {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: #2e2821;
+        }
+
+        .notice-box p {
+            color: #423b33;
+        }
+
+        /* FAQ (常见说明) 摘要 */
+        .faq-section {
+            margin-bottom: 3rem;
+        }
+
+        .faq-section h2 {
+            font-size: 1.5rem;
+            font-weight: 520;
+            margin-bottom: 1.5rem;
+            color: #2c261f;
+        }
+
+        .faq-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #e2d9cc;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 550;
+            font-size: 1.05rem;
+            color: #3d352b;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-answer {
+            color: #554c41;
+            font-size: 0.95rem;
+            padding-left: 0.2rem;
+        }
+
+        /* 延伸阅读区 */
+        .extra-read {
+            background: #f5f1ea;
+            border-radius: 1.8rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .extra-read strong {
+            color: #2d2821;
+        }
+
+        .extra-read a {
+            color: #6a5c48;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .extra-read a:hover {
+            color: #3d3226;
+        }
+
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 2rem 0 1.2rem;
+            border-top: 1px solid #e2dcd0;
+            color: #7b7265;
+            font-size: 0.85rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 640px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.6rem;
+            }
+            .hero {
+                padding: 2rem 1.4rem;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .intro-block {
+                padding: 1.6rem 1.2rem;
+            }
+            .scenes {
+                grid-template-columns: 1fr;
+            }
+            .notice-box {
+                padding: 1.4rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- 顶部导航 -->
+    <nav class="navbar">
+        <span class="brand">澳洲幸运10 · 日常参考</span>
+        <ul class="nav-links">
+            <li><a href="#intro">查询对照</a></li>
+            <li><a href="#scenes">常用场景</a></li>
+            <li><a href="#faq">常见说明</a></li>
+            <li><a href="#extra">延伸</a></li>
+        </ul>
+    </nav>
+
+    <!-- hero 日常检索 -->
+    <div class="hero">
+        <h1>澳洲幸运10 · 查询与对照</h1>
+        <p>一个偏向生活化的信息整理页，适合日常查阅、号码参考以及简单延伸阅读。没有复杂术语，只有清晰的条目和实用的结构。</p>
+        <span class="tagline">日常 · 对照 · 延伸</span>
+    </div>
+
+    <!-- 核心介绍 (嵌入链接) 自然句子 -->
+    <div class="intro-block" id="intro">
+        <h2>关于这个页面</h2>
+        <p>很多人习惯在手机或电脑上快速检索 <a href="https://app-australialucky10.com">澳洲幸运10</a> 的相关信息——走势、整理、或者单纯想看看近期记录。这个页面把零散的内容集中成一个轻导航结构，你可以从上方菜单直接跳到需要的段落。</p>
+        <p>所有内容都基于公开可查的信息整理，不包含预测或承诺，只提供结构化的展示。如果你需要更完整的数据或实时界面，<a href="https://app-australialucky10.com">澳洲幸运10</a> 的官方应用可以满足更细致的浏览需求。</p>
+    </div>
+
+    <!-- 三个场景模块 -->
+    <div class="scenes" id="scenes">
+        <div class="scene-card">
+            <span class="icon">📋</span>
+            <h3>日常查询</h3>
+            <p>打开页面快速浏览最近期数、号码排列和基础统计，适合每天早上或换班时简单扫一眼，省去翻找的麻烦。</p>
+        </div>
+        <div class="scene-card">
+            <span class="icon">🔍</span>
+            <h3>对照参考</h3>
+            <p>把几期数据放在一起横向对比——奇偶、区间、重复值——不管是自己记录还是和朋友讨论，都能有个直观的参照。</p>
+        </div>
+        <div class="scene-card">
+            <span class="icon">📖</span>
+            <h3>延伸阅读</h3>
+            <p>除了直接的数据，也附带一些背景说明、规则摘要和常见误区提醒，帮助新接触的用户更快理解基本运作方式。</p>
+        </div>
+    </div>
+
+    <!-- 引用 / 提示框 带有生活化语气 -->
+    <div class="notice-box">
+        <strong>💡 一点小提示</strong>
+        <p>数字只是数字，把它当作一种日常观察就好。不要过度解读单期变化，也不要轻信所谓的“必中”说法。保持轻松的心态，页面只是工具。</p>
+    </div>
+
+    <!-- FAQ / 常见说明 -->
+    <div class="faq-section" id="faq">
+        <h2>常见说明</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">❶ 澳洲幸运10 是什么类型的游戏？</div>
+            <div class="faq-answer">它属于数字竞猜类游戏，每期从一组号码中开出若干数字，玩家根据开奖结果进行对照。规则透明，开奖频率固定。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">❷ 我可以用这个页面做什么？</div>
+            <div class="faq-answer">你可以把它当作一个信息中转站：快速跳转到原始应用、阅读基础说明、查看场景分类，以及了解一些琐碎但有用的知识点。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">❸ 页面数据是否实时更新？</div>
+            <div class="faq-answer">本页面是介绍与导航性质，不直接嵌入实时数据流。如果你需要实时信息，推荐直接访问 <a href="https://app-australialucky10.com">澳洲幸运10</a> 官方应用。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">❹ 为什么强调“生活化语气”？</div>
+            <div class="faq-answer">因为大部分用户并不是专业分析师，只是想在闲暇时获得清晰的参考。页面去掉生硬的话术，读起来更像朋友随手整理的笔记。</div>
+        </div>
+    </div>
+
+    <!-- 延伸阅读区域 -->
+    <div class="extra-read" id="extra">
+        <strong>📌 延伸阅读 · 背景补充</strong>
+        <p style="margin-top: 0.6rem;">澳洲幸运10 的规则与其他同类游戏有相似也有差异，比如开奖个数、组选方式以及周期设置。如果你对具体玩法历史或概率基础感兴趣，很多论坛和百科都有详细介绍。本页面仅做最简单的收纳与导航，后续可能会增加对照表和术语小词典。目前可以通过顶部链接跳转回 <a href="https://app-australialucky10.com">澳洲幸运10</a> 主站获取一手信息。</p>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <p>仅供个人参考 · 信息整理 · 不构成任何建议</p>
+        <p style="margin-top: 0.3rem;">© 日常查询对照 · 米白版</p>
+    </div>
+
+</div>
+</body>
+</html>
